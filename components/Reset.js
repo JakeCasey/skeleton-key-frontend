@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 import Form from './styles/Form';
 import Error from '../components/ErrorMessage';
@@ -23,6 +24,13 @@ const RESET_MUTATION = gql`
       name
     }
   }
+`;
+
+const Container = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export default class Reset extends Component {
@@ -52,40 +60,42 @@ export default class Reset extends Component {
       >
         {(reset, { error, loading, called }) => {
           return (
-            <Form
-              method="post"
-              onSubmit={async e => {
-                e.preventDefault();
-                await reset();
-                this.setState({ email: '' });
-              }}
-            >
-              <fieldset disabled={loading} aria-busy={loading}>
-                <h2>Reset your password</h2>
-                <Error error={error} />
-                <label htmlFor="password">
-                  Password
-                  <input
-                    type="password"
-                    name="password"
-                    placeholder="password"
-                    value={this.state.password}
-                    onChange={this.saveToState}
-                  />
-                </label>
-                <label htmlFor="confirmPassword">
-                  Confirm Your Password
-                  <input
-                    type="password"
-                    name="confirmPassword"
-                    placeholder="confirmPassword"
-                    value={this.state.confirmPassword}
-                    onChange={this.saveToState}
-                  />
-                </label>
-                <button type="submit">Reset Your Password!</button>
-              </fieldset>
-            </Form>
+            <Container>
+              <Form
+                method="post"
+                onSubmit={async e => {
+                  e.preventDefault();
+                  await reset();
+                  this.setState({ email: '' });
+                }}
+              >
+                <fieldset disabled={loading} aria-busy={loading}>
+                  <h2>Reset your password</h2>
+                  <Error error={error} />
+                  <label htmlFor="password">
+                    Password
+                    <input
+                      type="password"
+                      name="password"
+                      placeholder="password"
+                      value={this.state.password}
+                      onChange={this.saveToState}
+                    />
+                  </label>
+                  <label htmlFor="confirmPassword">
+                    Confirm Your Password
+                    <input
+                      type="password"
+                      name="confirmPassword"
+                      placeholder="confirmPassword"
+                      value={this.state.confirmPassword}
+                      onChange={this.saveToState}
+                    />
+                  </label>
+                  <button type="submit">Reset Your Password!</button>
+                </fieldset>
+              </Form>
+            </Container>
           );
         }}
       </Mutation>

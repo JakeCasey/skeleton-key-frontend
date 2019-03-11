@@ -16,13 +16,9 @@ const Container = styled.div`
 
 const SignupPage = props => (
   <Container>
-    <div>
-      <RequestReset />
-    </div>
+    <RequestReset />
     <Signin />
-    <div>
-      <Signup />
-    </div>
+    <Signup />
   </Container>
 );
 

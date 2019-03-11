@@ -5,6 +5,7 @@ import Form from './styles/Form';
 import Error from '../components/ErrorMessage';
 import { CURRENT_USER_QUERY } from './User';
 import styled from 'styled-components';
+import { media } from './styles/MediaQueries';
 
 const SIGNIN_MUTATION = gql`
   mutation SIGNIN_MUTATION($email: String!, $password: String!) {
@@ -52,35 +53,37 @@ export default class Signin extends Component {
                   this.setState({ email: '', password: '' });
                 }}
               >
-                <div className="img-container">
-                  <img src={'/static/images/login.jpg'} />
-                </div>
-                <div className="form-container">
-                  <fieldset disabled={loading} aria-busy={loading}>
-                    <h2>Sign In</h2>
-                    <Error error={error} />
-                    <label htmlFor="email">
-                      Email
-                      <input
-                        type="email"
-                        name="email"
-                        placeholder="email"
-                        value={this.state.email}
-                        onChange={this.saveToState}
-                      />
-                    </label>
-                    <label htmlFor="password">
-                      Password
-                      <input
-                        type="password"
-                        name="password"
-                        placeholder="password"
-                        value={this.state.password}
-                        onChange={this.saveToState}
-                      />
-                    </label>
-                    <button type="submit">Sign In</button>
-                  </fieldset>
+                <div className="img-form">
+                  <div className="img-container">
+                    <img src={'/static/images/login.jpg'} />
+                  </div>
+                  <div className="form-container">
+                    <fieldset disabled={loading} aria-busy={loading}>
+                      <h2>Sign In</h2>
+                      <Error error={error} />
+                      <label htmlFor="email">
+                        Email
+                        <input
+                          type="email"
+                          name="email"
+                          placeholder="email"
+                          value={this.state.email}
+                          onChange={this.saveToState}
+                        />
+                      </label>
+                      <label htmlFor="password">
+                        Password
+                        <input
+                          type="password"
+                          name="password"
+                          placeholder="password"
+                          value={this.state.password}
+                          onChange={this.saveToState}
+                        />
+                      </label>
+                      <button type="submit">Sign In</button>
+                    </fieldset>
+                  </div>
                 </div>
               </Form>
             );

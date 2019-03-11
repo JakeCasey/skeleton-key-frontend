@@ -2,17 +2,17 @@
 
 exports[`<Nav/> renders a minimal nav when signed out 1`] = `
 <ul
-  className="NavStyles-sc-11c0d2g-0 jVmrgK"
+  className="NavStyles-sc-1nqau96-0 gkgfEP"
   data-test="nav"
 >
   <Link
-    href="/items"
+    href="/"
   >
     <a
-      href="/items"
+      href="/"
       onClick={[Function]}
     >
-      Shop
+      Home
     </a>
   </Link>
   <Link
@@ -28,10 +28,4 @@ exports[`<Nav/> renders a minimal nav when signed out 1`] = `
 </ul>
 `;
 
-exports[`<Nav/> renders the amount of items in the cart 1`] = `
-<div
-  className="count CartCount__Dot-xxvp4g-1 iGwbNe"
->
-  9
-</div>
-`;
+exports[`<Nav/> renders the amount of items in the cart 1`] = `null`;
