@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { media } from '../styles/MediaQueries';
 
 const loading = keyframes`
   from {
@@ -14,22 +15,31 @@ const loading = keyframes`
 
 const Form = styled.form`
   display: flex;
-  width: 750px;
   justify-content: center;
+  width: 100%;
   border-radius: ${props => props.theme.borders};
   box-shadow: 0 5px 15px hsla(0, 0%, 0%, 0.2);
   background: rgba(0, 0, 0, 0.02);
   font-size: 1.5rem;
   line-height: 1.5;
   font-weight: 600;
-  .img-container {
-    width: 50%;
-  }
-  .form-container {
-    width: 50%;
+
+  .img-form {
+    width: 100%;
     display: flex;
-    align-items: center;
+    .img-container {
+      width: 50%;
+      ${media.mobile`width: 100%`}
+    }
+    .form-container {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      ${media.mobile`width: 100%`}
+    }
+    ${media.mobile`flex-direction: column`}
   }
+
   h2 {
     font-size: 32px;
   }

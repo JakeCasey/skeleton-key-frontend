@@ -2,7 +2,7 @@
 
 exports[`<Signin/> renders and matches snapshot 1`] = `
 <form
-  className="Form-sc-1oofk7n-0 daYqWL"
+  className="img-form Form-sc-1oofk7n-0 gqFXte"
   method="post"
   onSubmit={[Function]}
 >
