@@ -410,23 +410,36 @@ var Nav = function Nav() {
         lineNumber: 17
       },
       __self: this
-    }, "Permissions")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SignoutButton__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    }, "Permissions")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      href: "/plans",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 19
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20
+      },
+      __self: this
+    }, "Plans")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SignoutButton__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22
       },
       __self: this
     })), !me && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
       href: "/signup",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 23
+        lineNumber: 26
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 24
+        lineNumber: 27
       },
       __self: this
     }, "Sign In")));
@@ -499,7 +512,7 @@ var theme = {
   bs: '0 5px 15px hsla(0, 0%, 0%, 0.2)',
   borders: '4px',
   button_borders: '4px',
-  button_color: 'gray'
+  button_color: 'lightskyblue'
 };
 var StyledPage = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "Page__StyledPage",

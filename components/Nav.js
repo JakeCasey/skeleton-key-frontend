@@ -16,6 +16,9 @@ const Nav = () => (
             <Link href="/permissions">
               <a>Permissions</a>
             </Link>
+            <Link href="/plans">
+              <a>Plans</a>
+            </Link>
             <SignoutButton />
           </>
         )}
