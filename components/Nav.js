@@ -1,7 +1,6 @@
 import Link from 'next/link';
-import { Mutation } from 'react-apollo';
 import NavStyles from './styles/NavStyles';
-import User from './User';
+import User from './wrappers/User';
 import SignoutButton from './SignoutButton';
 
 const Nav = () => (

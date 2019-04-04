@@ -1,8 +1,8 @@
 import Error from '../components/ErrorMessage';
-import GetPlansList from './GetPlansList';
-import gql from 'graphql-tag';
+import GetPlansList from './wrappers/GetPlansList';
+import Subscribe from './Subscribe';
 
-const Protected = props => {
+const Plans = props => {
     return (
         <div>
             <GetPlansList>
@@ -11,7 +11,7 @@ const Protected = props => {
                     return (
                         <div>
                             <h1> Our Plans </h1>
-                            {getPlansList.map((p, i) => (<h2 key={i}>{p.planId}</h2>))}
+                            {getPlansList.map((p, i) => (<Subscribe key={i} plan={p} />))}
                         </div>
                     )
                 }}
@@ -20,4 +20,4 @@ const Protected = props => {
     );
 };
 
-export default Protected;
+export default Plans;
