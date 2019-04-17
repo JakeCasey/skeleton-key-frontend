@@ -1,6 +1,6 @@
 import Error from '../components/ErrorMessage';
 import GetPlansList from './wrappers/GetPlansList';
-import Subscribe from './Subscribe';
+import SubscribeOrUnsubscribe from './SubscribeOrUnsubscribe';
 
 const Plans = props => {
     return (
@@ -11,7 +11,7 @@ const Plans = props => {
                     return (
                         <div>
                             <h1> Our Plans </h1>
-                            {getPlansList.map((p, i) => (<Subscribe key={i} plan={p} />))}
+                            {getPlansList.map((p, i) => (<SubscribeOrUnsubscribe key={i} plan={p} />))}
                         </div>
                     )
                 }}
