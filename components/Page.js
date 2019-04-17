@@ -14,7 +14,7 @@ const theme = {
   bs: '0 5px 15px hsla(0, 0%, 0%, 0.2)',
   borders: '4px',
   button_borders: '4px',
-  button_color: 'gray',
+  button_color: 'lightskyblue',
 };
 
 const StyledPage = styled.div`
