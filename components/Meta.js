@@ -1,4 +1,5 @@
-import Head from 'next/head';
+import Head from "next/head";
+import "../static/tailwind.css";
 
 const Meta = () => (
   <Head>
@@ -6,7 +7,7 @@ const Meta = () => (
     <meta charSet="utf-8" />
     {/* <link rel="shortcut icon" href="/static/favicon.png" /> */}
     <link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
-    <title>Skeleton Key</title>
+    <title>SKELETON KEY</title>
   </Head>
 );
 export default Meta;

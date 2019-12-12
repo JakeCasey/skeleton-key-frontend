@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.toolbar_card {
+  @apply flex flex-col my-4 py-8 px-8 shadow rounded-lg;
+}
+
+.toolbar_header_container {
+  @apply flex mb-8;
+}
+
+.toolbar_header {
+  @apply leading-loose uppercase tracking-widest text-xs text-gray-500 leading-none;
+}
+
+.toolbar-icon {
+  @apply w-6 h-6 mr-2;
+}
+
+.nav-link {
+  @apply px-6 font-black leading-none;
+}

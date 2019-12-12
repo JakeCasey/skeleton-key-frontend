@@ -3,7 +3,6 @@ import Subscribe from './Subscribe';
 import Unsubscribe from './Unsubscribe';
 
 var isSubscribedToThisPlan = (plansSubscribed, plan) => {
-  console.log(plansSubscribed);
   if (!plansSubscribed) return false;
 
   var isSubscribedToThisPlan = plansSubscribed.filter(p => {

@@ -14,7 +14,6 @@ const Item = styled.div`
   }
   p {
     font-size: 12px;
-    line-height: 2;
     font-weight: 300;
     flex-grow: 1;
     padding: 0 3rem;

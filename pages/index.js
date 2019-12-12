@@ -1,6 +1,8 @@
+import HomePage from '../components/special/HomePage';
+
 const Home = props => (
   <div>
-    <h1>Hello World</h1>
+    <HomePage />
   </div>
 );
 

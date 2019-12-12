@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 import Form from './styles/Form';
 import Error from '../components/ErrorMessage';
-import { CURRENT_USER_QUERY } from './User';
+import { CURRENT_USER_QUERY } from './wrappers/User';
 
 const RESET_MUTATION = gql`
   mutation RESET_MUTATION(

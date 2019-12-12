@@ -1,8 +1,8 @@
-import Link from 'next/link';
-import styled from 'styled-components';
-import Nav from './Nav';
-import Router from 'next/router';
-import NProgress from 'nprogress';
+import Link from "next/link";
+import styled from "styled-components";
+import Nav from "./Nav";
+import Router from "next/router";
+import NProgress from "nprogress";
 
 Router.onRouteChangeStart = () => {
   NProgress.start();
@@ -15,28 +15,12 @@ Router.onRouteChangeError = () => {
   NProgress.done();
 };
 
-const Logo = styled.h1`
-  font-size: 4rem;
-  margin-left: 2rem;
-  position: relative;
-  z-index: 2;
-  a {
-    padding: 0.5rem 1rem;
-    /* background: ${props => props.theme.primary}; */
-    color: ${props => props.theme.black};
-    text-transform: uppercase;
-    text-decoration: none;
-  }
-  @media (max-width: 1300px) {
-    margin: 0;
-    text-align: center;
-  }
-`;
+const Logo = styled.h1``;
 
 const StyledHeader = styled.header`
   .bar {
    /* border-bottom: 10px solid ${props => props.theme.black}; */
-   box-shadow: ${props => props.theme.bs};
+   /* box-shadow: ${props => props.theme.bs}; */
     display: grid;
     grid-template-columns: auto 1fr;
     justify-content: space-between;
@@ -51,14 +35,19 @@ const StyledHeader = styled.header`
     grid-template-columns: 1fr auto;
     border-bottom: 1px solid ${props => props.theme.lightgrey};
   }
+  
+  /* a {
+    letter-spacing: -0.055em;
+    font-weight: 740;
+  } */
 `;
 
 const Header = () => (
   <StyledHeader>
-    <div className="bar">
-      <Logo>
+    <div className="mb-12 bar">
+      <Logo className="text-5xl leading-none lowercase">
         <Link href="/">
-          <a>Skeleton Key</a>
+          <a className="font-bold">Skeleton Key</a>
         </Link>
       </Logo>
       <Nav />

@@ -9,7 +9,6 @@ const Title = styled.h3`
   a {
     background: ${props => props.theme.red};
     display: inline;
-    line-height: 1.3;
     font-size: 4rem;
     text-align: center;
     color: white;

@@ -1,5 +1,5 @@
-import styled, { keyframes } from 'styled-components';
-import { media } from '../styles/MediaQueries';
+import styled, { keyframes } from "styled-components";
+import { media } from "../styles/MediaQueries";
 
 const loading = keyframes`
   from {
@@ -21,7 +21,6 @@ const Form = styled.form`
   box-shadow: 0 5px 15px hsla(0, 0%, 0%, 0.2);
   background: rgba(0, 0, 0, 0.02);
   font-size: 1.5rem;
-  line-height: 1.5;
   font-weight: 600;
 
   .img-form {
@@ -69,7 +68,7 @@ const Form = styled.form`
     }
   }
   button,
-  input[type='submit'] {
+  input[type="submit"] {
     width: 100%;
     border-radius: ${props => props.theme.button_borders};
     background: ${props => props.theme.button_color};
@@ -87,7 +86,7 @@ const Form = styled.form`
     a &[disabled] {
       opacity: 0.5;
     }
-    &[aria-busy='true']::before {
+    &[aria-busy="true"]::before {
       background-size: 50% auto;
       animation: ${loading} 0.5s linear infinite;
     }
