@@ -107,7 +107,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/jakecasey/Documents/Projects/skeleton-key-frontend/components/special/HomePage.js";
+var _jsxFileName = "/Users/jakecasey/Documents/Projects/skeleton-key/skeleton-key-frontend/components/special/HomePage.js";
 
 
 const Tagline = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.h1.withConfig({
@@ -180,7 +180,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_special_HomePage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/special/HomePage */ "./components/special/HomePage.js");
-var _jsxFileName = "/Users/jakecasey/Documents/Projects/skeleton-key-frontend/pages/index.js";
+var _jsxFileName = "/Users/jakecasey/Documents/Projects/skeleton-key/skeleton-key-frontend/pages/index.js";
 
 
 
@@ -209,7 +209,7 @@ const Home = props => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/jakecasey/Documents/Projects/skeleton-key-frontend/pages/index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! /Users/jakecasey/Documents/Projects/skeleton-key/skeleton-key-frontend/pages/index.js */"./pages/index.js");
 
 
 /***/ }),

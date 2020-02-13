@@ -108,7 +108,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "prop-types");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/jakecasey/Documents/Projects/skeleton-key-frontend/components/ErrorMessage.js";
+var _jsxFileName = "/Users/jakecasey/Documents/Projects/skeleton-key/skeleton-key-frontend/components/ErrorMessage.js";
 
 
 
@@ -198,7 +198,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! nprogress */ "nprogress");
 /* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(nprogress__WEBPACK_IMPORTED_MODULE_5__);
-var _jsxFileName = "/Users/jakecasey/Documents/Projects/skeleton-key-frontend/components/Header.js";
+var _jsxFileName = "/Users/jakecasey/Documents/Projects/skeleton-key/skeleton-key-frontend/components/Header.js";
 
 
 
@@ -288,7 +288,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _static_tailwind_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../static/tailwind.css */ "./static/tailwind.css");
 /* harmony import */ var _static_tailwind_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_static_tailwind_css__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/jakecasey/Documents/Projects/skeleton-key-frontend/components/Meta.js";
+var _jsxFileName = "/Users/jakecasey/Documents/Projects/skeleton-key/skeleton-key-frontend/components/Meta.js";
 
 
 
@@ -352,7 +352,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SignoutButton__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./SignoutButton */ "./components/SignoutButton.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "/Users/jakecasey/Documents/Projects/skeleton-key-frontend/components/Nav.js";
+var _jsxFileName = "/Users/jakecasey/Documents/Projects/skeleton-key/skeleton-key-frontend/components/Nav.js";
 
 
 
@@ -399,7 +399,7 @@ const Nav = () => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_wr
       lineNumber: 15
     },
     __self: undefined
-  }, "My Monitors")), me && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, "Example Page")), me && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/permissions",
     __source: {
       fileName: _jsxFileName,
@@ -484,7 +484,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Header */ "./components/Header.js");
 /* harmony import */ var _Meta__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Meta */ "./components/Meta.js");
 /* harmony import */ var _special_TopBar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./special/TopBar */ "./components/special/TopBar.js");
-var _jsxFileName = "/Users/jakecasey/Documents/Projects/skeleton-key-frontend/components/Page.js";
+var _jsxFileName = "/Users/jakecasey/Documents/Projects/skeleton-key/skeleton-key-frontend/components/Page.js";
 
 
 
@@ -617,7 +617,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _wrappers_User__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./wrappers/User */ "./components/wrappers/User.js");
-var _jsxFileName = "/Users/jakecasey/Documents/Projects/skeleton-key-frontend/components/SignoutButton.js";
+var _jsxFileName = "/Users/jakecasey/Documents/Projects/skeleton-key/skeleton-key-frontend/components/SignoutButton.js";
 
 
 
@@ -675,7 +675,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/jakecasey/Documents/Projects/skeleton-key-frontend/components/special/TopBar.js";
+var _jsxFileName = "/Users/jakecasey/Documents/Projects/skeleton-key/skeleton-key-frontend/components/special/TopBar.js";
 
 
 class TopBar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
@@ -734,7 +734,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "prop-types");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
 
-var _jsxFileName = "/Users/jakecasey/Documents/Projects/skeleton-key-frontend/components/wrappers/User.js";
+var _jsxFileName = "/Users/jakecasey/Documents/Projects/skeleton-key/skeleton-key-frontend/components/wrappers/User.js";
 
 
 
@@ -1786,7 +1786,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var unstated__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! unstated */ "unstated");
 /* harmony import */ var unstated__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(unstated__WEBPACK_IMPORTED_MODULE_6__);
 
-var _jsxFileName = "/Users/jakecasey/Documents/Projects/skeleton-key-frontend/pages/_app.js";
+var _jsxFileName = "/Users/jakecasey/Documents/Projects/skeleton-key/skeleton-key-frontend/pages/_app.js";
 
 
 

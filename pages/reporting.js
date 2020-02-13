@@ -1,10 +1,10 @@
 import React from "react";
 import PleaseSignIn from "../components/PleaseSignIn";
-import MyMonitors from "../components/special/MyMonitors";
+import ExamplePage from "../components/special/ExamplePage";
 
 const ProtectedPage = props => (
   <div>
-    <MyMonitors />
+    <ExamplePage />
   </div>
 );
 

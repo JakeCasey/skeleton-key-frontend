@@ -23,7 +23,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/jakecasey/Documents/Projects/skeleton-key-frontend/components/special/HomePage.js";
+var _jsxFileName = "/Users/jakecasey/Documents/Projects/skeleton-key/skeleton-key-frontend/components/special/HomePage.js";
 
 
 var Tagline = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].h1.withConfig({
@@ -2368,10 +2368,10 @@ module.exports = hoistNonReactStatics;
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fjakecasey%2FDocuments%2FProjects%2Fskeleton-key-frontend%2Fpages%2Findex.js!./":
-/*!***************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fjakecasey%2FDocuments%2FProjects%2Fskeleton-key-frontend%2Fpages%2Findex.js ***!
-  \***************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fjakecasey%2FDocuments%2FProjects%2Fskeleton-key%2Fskeleton-key-frontend%2Fpages%2Findex.js!./":
+/*!******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fjakecasey%2FDocuments%2FProjects%2Fskeleton-key%2Fskeleton-key-frontend%2Fpages%2Findex.js ***!
+  \******************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7675,7 +7675,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_special_HomePage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/special/HomePage */ "./components/special/HomePage.js");
-var _jsxFileName = "/Users/jakecasey/Documents/Projects/skeleton-key-frontend/pages/index.js";
+var _jsxFileName = "/Users/jakecasey/Documents/Projects/skeleton-key/skeleton-key-frontend/pages/index.js";
 
 
 
@@ -7700,13 +7700,13 @@ var Home = function Home(props) {
 /***/ }),
 
 /***/ 1:
-/*!*******************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fjakecasey%2FDocuments%2FProjects%2Fskeleton-key-frontend%2Fpages%2Findex.js ***!
-  \*******************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fjakecasey%2FDocuments%2FProjects%2Fskeleton-key%2Fskeleton-key-frontend%2Fpages%2Findex.js ***!
+  \**********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fjakecasey%2FDocuments%2FProjects%2Fskeleton-key-frontend%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fjakecasey%2FDocuments%2FProjects%2Fskeleton-key-frontend%2Fpages%2Findex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fjakecasey%2FDocuments%2FProjects%2Fskeleton-key%2Fskeleton-key-frontend%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fjakecasey%2FDocuments%2FProjects%2Fskeleton-key%2Fskeleton-key-frontend%2Fpages%2Findex.js!./");
 
 
 /***/ }),
