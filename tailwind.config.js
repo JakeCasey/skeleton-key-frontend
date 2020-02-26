@@ -1,7 +1,10 @@
+// custom tailwind color scale generator
+// https://javisperez.github.io/tailwindcolorshades/
+
 module.exports = {
   theme: {
-    extend: {}
+    extend: {},
   },
-  variants: {},
-  plugins: []
-}
+  variants: ['responsive', 'hover'],
+  plugins: [],
+};
