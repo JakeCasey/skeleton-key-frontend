@@ -7,7 +7,7 @@ class DashboardComponent extends PureComponent {
     super(props);
 
     this.state = {
-      worldModalIsVisible: true,
+      worldModalIsVisible: false,
     };
   }
 

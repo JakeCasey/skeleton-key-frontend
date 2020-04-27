@@ -508,7 +508,7 @@ var DashboardComponent = /*#__PURE__*/function (_PureComponent) {
     });
 
     _this.state = {
-      worldModalIsVisible: true
+      worldModalIsVisible: false
     };
     return _this;
   }

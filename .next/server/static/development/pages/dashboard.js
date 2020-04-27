@@ -519,7 +519,7 @@ class DashboardComponent extends react__WEBPACK_IMPORTED_MODULE_0__["PureCompone
     });
 
     this.state = {
-      worldModalIsVisible: true
+      worldModalIsVisible: false
     };
   }
 
