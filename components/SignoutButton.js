@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import { Mutation } from "react-apollo";
-import Error from "./ErrorMessage";
-import gql from "graphql-tag";
-import { CURRENT_USER_QUERY } from "./wrappers/User";
+import React, { Component } from 'react';
+import { Mutation } from 'react-apollo';
+import Error from './ErrorMessage';
+import gql from 'graphql-tag';
+import { CURRENT_USER_QUERY } from './wrappers/User';
 
 const SIGN_OUT_MUTATION = gql`
   mutation SIGN_OUT_MUTATION {
@@ -20,7 +20,7 @@ export default class SignoutButton extends Component {
         refetchQueries={[{ query: CURRENT_USER_QUERY }]}
       >
         {(signout, { loading, error }) => {
-          return <button onClick={() => signout()}>Sign Out </button>;
+          return <span onClick={() => signout()}>Sign Out </span>;
         }}
       </Mutation>
     );

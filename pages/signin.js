@@ -3,23 +3,12 @@ import Signup from '../components/Signup';
 import Signin from '../components/Signin';
 import RequestReset from '../components/RequestReset';
 
-import styled from 'styled-components';
-
-const Container = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  & > * {
-    padding-top: 20px;
-  }
-`;
-
-const SignupPage = props => (
-  <Container>
+const SignupPage = (props) => (
+  <div className="flex flex-col items-center">
     <RequestReset />
     <Signin />
     <Signup />
-  </Container>
+  </div>
 );
 
 export default SignupPage;

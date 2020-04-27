@@ -1,0 +1,1 @@
+{"ast":null,"code":"var __jsx = React.createElement;\nimport React from 'react';\nimport PleaseSignIn from '../components/PleaseSignIn';\nimport HomePage from '../components/special/HomePage';\n\nconst Dashboard = props => __jsx(\"div\", null, __jsx(PleaseSignIn, null, __jsx(HomePage, null)));\n\nexport default Dashboard;","map":null,"metadata":{},"sourceType":"module"}

@@ -1,8 +1,8 @@
-import HomePage from '../components/special/HomePage';
+import Dashboard from '../components/special/Dashboard';
 
-const Home = props => (
+const Home = (props) => (
   <div>
-    <HomePage />
+    <Dashboard />
   </div>
 );
 

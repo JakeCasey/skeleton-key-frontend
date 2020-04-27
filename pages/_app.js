@@ -1,9 +1,10 @@
-import App, { Container } from 'next/app';
+import App from 'next/app';
 import Page from '../components/Page';
 import { ApolloProvider } from 'react-apollo';
 
 import withData from '../lib/withData';
-import { Provider } from 'unstated';
+import '../public/static/tailwind.css';
+// import { Provider } from 'unstated';
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -19,16 +20,16 @@ class MyApp extends App {
   render() {
     const { Component, apollo, pageProps } = this.props;
     return (
-      <Container>
+      <div>
         <ApolloProvider client={apollo}>
-          <Provider>
-            <Page>
-              {' '}
-              <Component {...pageProps} />
-            </Page>
-          </Provider>
+          {/* <Provider> */}
+          <Page>
+            {' '}
+            <Component {...pageProps} />
+          </Page>
+          {/* </Provider> */}
         </ApolloProvider>
-      </Container>
+      </div>
     );
   }
 }

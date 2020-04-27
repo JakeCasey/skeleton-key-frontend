@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind ui;
+
+.toolbar_card {
+  @apply flex flex-col px-8 py-8 my-4 rounded-lg shadow;
+}
+
+.toolbar_header_container {
+  @apply flex mb-8;
+}
+
+.toolbar_header {
+  @apply text-xs leading-none leading-loose tracking-widest text-gray-500 uppercase;
+}
+
+.toolbar-icon {
+  @apply w-6 h-6 mr-2;
+}
+
+.nav-link {
+  @apply flex items-center px-2 py-2 mt-1 text-sm font-medium leading-5 text-gray-300 transition duration-150 ease-in-out rounded-md;
+}
+
+.nav-link:focus {
+  @apply text-white bg-gray-700 outline-none;
+}
+
+.nav-link:hover {
+  @apply text-white bg-gray-700;
+}
+
+.nav-link.active {
+  @apply text-white bg-gray-900;
+}
+
+@tailwind utilities;

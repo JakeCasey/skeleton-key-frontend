@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
+import { Mutation } from 'react-apollo';
+import Router from 'next/router';
+
 import Form from './styles/Form';
 import Error from '../components/ErrorMessage';
 import { CURRENT_USER_QUERY } from './wrappers/User';
 import styled from 'styled-components';
-import { media } from './styles/MediaQueries';
 
 const SIGNIN_MUTATION = gql`
   mutation SIGNIN_MUTATION($email: String!, $password: String!) {
@@ -24,19 +25,19 @@ const Container = styled.div`
   align-items: center;
 `;
 
-export default class Signin extends Component {
+class Signin extends Component {
   state = {
     email: '',
     password: '',
   };
 
-  saveToState = e => {
+  saveToState = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
-  t;
+
   render() {
     return (
-      <Container>
+      <Container className="pt-6">
         <Mutation
           mutation={SIGNIN_MUTATION}
           variables={this.state}
@@ -46,10 +47,11 @@ export default class Signin extends Component {
             return (
               <Form
                 method="post"
-                onSubmit={async e => {
+                onSubmit={async (e) => {
                   e.preventDefault();
                   const res = await signin();
                   this.setState({ email: '', password: '' });
+                  Router.push('/dashboard');
                 }}
               >
                 <div className="img-form">
@@ -65,6 +67,7 @@ export default class Signin extends Component {
                         <input
                           type="email"
                           name="email"
+                          className="rounded"
                           placeholder="email"
                           value={this.state.email}
                           onChange={this.saveToState}
@@ -75,12 +78,18 @@ export default class Signin extends Component {
                         <input
                           type="password"
                           name="password"
+                          className="rounded"
                           placeholder="password"
                           value={this.state.password}
                           onChange={this.saveToState}
                         />
                       </label>
-                      <button type="submit">Sign In</button>
+                      <button
+                        className="tracking-wide text-white bg-blue-500 rounded text-bold"
+                        type="submit"
+                      >
+                        Sign In
+                      </button>
                     </fieldset>
                   </div>
                 </div>
@@ -92,4 +101,6 @@ export default class Signin extends Component {
     );
   }
 }
+
+export default Signin;
 export { SIGNIN_MUTATION };

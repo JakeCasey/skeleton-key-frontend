@@ -6,5 +6,5 @@ module.exports = {
     extend: {},
   },
   variants: ['responsive', 'hover'],
-  plugins: [],
+  plugins: [require('@tailwindcss/ui')],
 };

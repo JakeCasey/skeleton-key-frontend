@@ -1,0 +1,1 @@
+{"ast":null,"code":"var __jsx = React.createElement;\nimport React from 'react';\nimport Reset from '../components/Reset';\n\nvar ResetPage = function ResetPage(props) {\n  return __jsx(\"div\", null, __jsx(Reset, {\n    resetToken: props.query.resetToken\n  }));\n};\n\nexport default ResetPage;","map":null,"metadata":{},"sourceType":"module"}

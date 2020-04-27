@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Mutation } from 'react-apollo';
+import { useRouter } from 'next/router';
 import gql from 'graphql-tag';
+import { withRouter } from 'next/router';
+
 import Form from './styles/Form';
 import Error from '../components/ErrorMessage';
 import styled from 'styled-components';
@@ -34,13 +37,13 @@ export default class Signup extends Component {
     password: '',
   };
 
-  saveToState = e => {
+  saveToState = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
   t;
   render() {
     return (
-      <Container>
+      <Container className="pt-6">
         <Mutation
           mutation={SIGNUP_MUTATION}
           variables={this.state}
@@ -50,10 +53,11 @@ export default class Signup extends Component {
             return (
               <Form
                 method="post"
-                onSubmit={async e => {
+                onSubmit={async (e) => {
                   e.preventDefault();
                   const res = await signup();
                   this.setState({ name: '', email: '', password: '' });
+                  router.push('/dashboard');
                 }}
               >
                 <fieldset disabled={loading} aria-busy={loading}>
@@ -65,6 +69,7 @@ export default class Signup extends Component {
                       type="email"
                       name="email"
                       placeholder="email"
+                      className="rounded"
                       value={this.state.email}
                       onChange={this.saveToState}
                     />
@@ -74,6 +79,7 @@ export default class Signup extends Component {
                     <input
                       type="text"
                       name="name"
+                      className="rounded"
                       placeholder="name"
                       value={this.state.name}
                       onChange={this.saveToState}
@@ -89,7 +95,12 @@ export default class Signup extends Component {
                       onChange={this.saveToState}
                     />
                   </label>
-                  <button type="submit">Sign Up</button>
+                  <button
+                    className="tracking-wide text-white bg-blue-500 rounded text-bold"
+                    type="submit"
+                  >
+                    Sign Up
+                  </button>
                 </fieldset>
               </Form>
             );
