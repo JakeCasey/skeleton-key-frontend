@@ -4,7 +4,6 @@ import StripeCheckout from 'react-stripe-checkout';
 import { CURRENT_USER_QUERY } from './wrappers/User';
 import { STRIPE_PUBLIC_KEY } from '../config';
 import gql from 'graphql-tag';
-import styled from 'styled-components';
 import SickButton from './styles/SickButton';
 
 const UNSUBSCRIBE_USER_MUTATION = gql`

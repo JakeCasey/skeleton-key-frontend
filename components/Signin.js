@@ -3,10 +3,8 @@ import gql from 'graphql-tag';
 import { Mutation } from 'react-apollo';
 import Router from 'next/router';
 
-import Form from './styles/Form';
 import Error from '../components/ErrorMessage';
 import { CURRENT_USER_QUERY } from './wrappers/User';
-import styled from 'styled-components';
 
 const SIGNIN_MUTATION = gql`
   mutation SIGNIN_MUTATION($email: String!, $password: String!) {
@@ -16,13 +14,6 @@ const SIGNIN_MUTATION = gql`
       name
     }
   }
-`;
-
-const Container = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 
 class Signin extends Component {
@@ -37,7 +28,7 @@ class Signin extends Component {
 
   render() {
     return (
-      <Container className="pt-6">
+      <div className="pt-6">
         <Mutation
           mutation={SIGNIN_MUTATION}
           variables={this.state}
@@ -45,7 +36,7 @@ class Signin extends Component {
         >
           {(signin, { error, loading }) => {
             return (
-              <Form
+              <form
                 method="post"
                 onSubmit={async (e) => {
                   e.preventDefault();
@@ -93,11 +84,11 @@ class Signin extends Component {
                     </fieldset>
                   </div>
                 </div>
-              </Form>
+              </form>
             );
           }}
         </Mutation>
-      </Container>
+      </div>
     );
   }
 }

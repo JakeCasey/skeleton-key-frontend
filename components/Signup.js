@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { Mutation } from 'react-apollo';
-import { useRouter } from 'next/router';
-import gql from 'graphql-tag';
-import { withRouter } from 'next/router';
 
-import Form from './styles/Form';
+import gql from 'graphql-tag';
+import { useRouter } from 'next/router';
+
 import Error from '../components/ErrorMessage';
-import styled from 'styled-components';
 import { CURRENT_USER_QUERY } from './wrappers/User';
 
 const SIGNUP_MUTATION = gql`
@@ -23,91 +21,86 @@ const SIGNUP_MUTATION = gql`
   }
 `;
 
-const Container = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
+let Signup = () => {
+  let router = useRouter();
 
-export default class Signup extends Component {
-  state = {
-    email: '',
-    name: '',
-    password: '',
+  let [email, updateEmail] = useState('');
+  let [name, updateName] = useState('');
+  let [password, updatePassword] = useState('');
+
+  let reset = () => {
+    updateName('');
+    updateEmail('');
+    updatePassword('');
   };
 
-  saveToState = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
-  t;
-  render() {
-    return (
-      <Container className="pt-6">
-        <Mutation
-          mutation={SIGNUP_MUTATION}
-          variables={this.state}
-          refetchQueries={[{ query: CURRENT_USER_QUERY }]}
-        >
-          {(signup, { loading, error }) => {
-            return (
-              <Form
-                method="post"
-                onSubmit={async (e) => {
-                  e.preventDefault();
-                  const res = await signup();
-                  this.setState({ name: '', email: '', password: '' });
-                  router.push('/dashboard');
-                }}
-              >
-                <fieldset disabled={loading} aria-busy={loading}>
-                  <h2> Sign up for an account </h2>
-                  <Error error={error} />
-                  <label htmlFor="email">
-                    Email
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="email"
-                      className="rounded"
-                      value={this.state.email}
-                      onChange={this.saveToState}
-                    />
-                  </label>
-                  <label htmlFor="name">
-                    Name
-                    <input
-                      type="text"
-                      name="name"
-                      className="rounded"
-                      placeholder="name"
-                      value={this.state.name}
-                      onChange={this.saveToState}
-                    />
-                  </label>
-                  <label htmlFor="password">
-                    Password
-                    <input
-                      type="password"
-                      name="password"
-                      placeholder="password"
-                      value={this.state.password}
-                      onChange={this.saveToState}
-                    />
-                  </label>
-                  <button
-                    className="tracking-wide text-white bg-blue-500 rounded text-bold"
-                    type="submit"
-                  >
-                    Sign Up
-                  </button>
-                </fieldset>
-              </Form>
-            );
-          }}
-        </Mutation>
-      </Container>
-    );
-  }
-}
+  return (
+    <div className="pt-6">
+      <Mutation
+        mutation={SIGNUP_MUTATION}
+        variables={{ email, name, password }}
+        refetchQueries={[{ query: CURRENT_USER_QUERY }]}
+      >
+        {(signup, { loading, error }) => {
+          return (
+            <form
+              method="post"
+              onSubmit={async (e) => {
+                e.preventDefault();
+                const res = await signup();
+                reset();
+                router.push('/dashboard');
+              }}
+            >
+              <fieldset disabled={loading} aria-busy={loading}>
+                <h2> Sign up for an account </h2>
+                <Error error={error} />
+                <label htmlFor="email">
+                  Email
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="email"
+                    className="rounded"
+                    value={email}
+                    onChange={(e) => updateEmail(e.target.value)}
+                  />
+                </label>
+                <label htmlFor="name">
+                  Name
+                  <input
+                    type="text"
+                    name="name"
+                    className="rounded"
+                    placeholder="name"
+                    value={name}
+                    onChange={(e) => updateName(e.target.value)}
+                  />
+                </label>
+                <label htmlFor="password">
+                  Password
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="password"
+                    value={password}
+                    onChange={(e) => updatePassword(e.target.value)}
+                  />
+                </label>
+                <button
+                  className="tracking-wide text-white bg-blue-500 rounded text-bold"
+                  type="submit"
+                >
+                  Sign Up
+                </button>
+              </fieldset>
+            </form>
+          );
+        }}
+      </Mutation>
+    </div>
+  );
+};
+
+export default Signup;
 export { SIGNUP_MUTATION };

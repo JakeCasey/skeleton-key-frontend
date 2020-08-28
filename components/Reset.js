@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
 import Form from './styles/Form';
 import Error from '../components/ErrorMessage';
@@ -26,13 +25,6 @@ const RESET_MUTATION = gql`
   }
 `;
 
-const Container = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
 export default class Reset extends Component {
   static propTypes = {
     resetToken: PropTypes.string.isRequired,
@@ -43,7 +35,7 @@ export default class Reset extends Component {
     confirmPassword: '',
   };
 
-  saveToState = e => {
+  saveToState = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
@@ -60,10 +52,10 @@ export default class Reset extends Component {
       >
         {(reset, { error, loading, called }) => {
           return (
-            <Container>
+            <div>
               <Form
                 method="post"
-                onSubmit={async e => {
+                onSubmit={async (e) => {
                   e.preventDefault();
                   await reset();
                   this.setState({ email: '' });
@@ -95,7 +87,7 @@ export default class Reset extends Component {
                   <button type="submit">Reset Your Password!</button>
                 </fieldset>
               </Form>
-            </Container>
+            </div>
           );
         }}
       </Mutation>

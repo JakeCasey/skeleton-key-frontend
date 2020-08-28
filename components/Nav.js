@@ -1,7 +1,6 @@
-import Link from "next/link";
-import User from "./wrappers/User";
-import SignoutButton from "./SignoutButton";
-import styled from "styled-components";
+import Link from 'next/link';
+import User from './wrappers/User';
+import SignoutButton from './SignoutButton';
 
 const Nav = () => (
   <User>

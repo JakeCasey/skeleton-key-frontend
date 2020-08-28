@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React, { Component } from 'react';
 
 export default class ExamplePage extends Component {
   render() {
