@@ -1,1 +1,0 @@
-{"ast":null,"code":"var __jsx = React.createElement;\nimport React from \"react\";\nimport PleaseSignIn from \"../components/PleaseSignIn\";\nimport ExamplePage from \"../components/special/ExamplePage\";\n\nconst ProtectedPage = props => __jsx(\"div\", null, __jsx(ExamplePage, null));\n\nexport default ProtectedPage;","map":null,"metadata":{},"sourceType":"module"}
