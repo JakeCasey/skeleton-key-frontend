@@ -1,37 +1,392 @@
 @tailwind base;
 @tailwind components;
-@tailwind ui;
 
-.toolbar_card {
-  @apply flex flex-col px-8 py-8 my-4 rounded-lg shadow;
+.alignwide {
+	@apply w-full max-w-6xl px-8 mx-auto;
 }
 
-.toolbar_header_container {
-  @apply flex mb-8;
+.page-content {
+	@apply relative z-10 w-full max-w-5xl px-8 py-8 mx-auto;
 }
 
-.toolbar_header {
-  @apply text-xs leading-none leading-loose tracking-widest text-gray-500 uppercase;
+html body {
+	@apply font-normal leading-normal tracking-tight bg-white text-book-black font-filson;
 }
 
-.toolbar-icon {
-  @apply w-6 h-6 mr-2;
+body * {
+	transition: all ease-in-out 0.1s;
+}
+
+select {
+	appearance: none;
+}
+
+.inline-form {
+	@apply flex space-x-4;
+}
+
+.inline-form button {
+	@apply flex items-center px-4 space-x-1 text-white bg-ds-navy hover:opacity-75;
+}
+
+.inline-form button svg {
+	@apply w-auto h-5;
+}
+
+.ds-input {
+	@apply px-4 py-3 placeholder-gray-600 bg-ds-dkgray active:border-ds-navy focus:border-ds-navy focus:outline-none;
+}
+
+.ds-textarea {
+	@apply w-full px-4 py-3 placeholder-gray-600 bg-ds-dkgray active:border-ds-navy focus:border-ds-navy focus:outline-none;
 }
 
 .nav-link {
-  @apply flex items-center px-2 py-2 mt-1 text-sm font-medium leading-5 text-gray-300 transition duration-150 ease-in-out rounded-md;
-}
-
-.nav-link:focus {
-  @apply text-white bg-gray-700 outline-none;
-}
-
-.nav-link:hover {
-  @apply text-white bg-gray-700;
+	@apply relative flex items-center w-full px-4 py-3 space-x-2 overflow-hidden text-left cursor-pointer;
 }
 
 .nav-link.active {
-  @apply text-white bg-gray-900;
+	@apply overflow-visible text-white bg-ds-primary;
+}
+
+.nav-link.active .open-icon {
+	right: -1px;
+	@apply opacity-100;
+}
+
+.card-section {
+	@apply flex flex-col flex-grow p-6 border-b md:border-b-0 md:border-r last:border-b-0 last:border-r-0;
+}
+
+.nav-icon {
+	@apply flex items-center justify-center block w-4 h-4 m-1 group-hover:scale-110;
+}
+
+.ds-grid {
+	@apply grid grid-cols-1 gap-8 md:grid-cols-2;
+}
+
+.subnav-link {
+	@apply flex px-2 py-2 m-1 text-left border-2 rounded-full cursor-pointer md:m-0 md:hover:bg-ds-gray md:rounded-none md:border-0;
+}
+
+.subnav-active {
+	@apply md:border-l-4 bg-ds-gray border-ds-navy text-ds-navy;
+}
+
+.compose-section {
+	@apply block border-b;
+}
+
+.compose-header {
+	@apply flex items-center justify-between px-3 py-3 cursor-pointer;
+}
+
+.compose-body {
+	@apply hidden px-3 pb-3 space-y-2 text-sm;
+}
+
+.compose-header.active + .compose-body {
+	@apply block;
+}
+
+.compose-header:hover svg {
+	@apply scale-110;
+}
+
+.insert-button {
+	@apply inline-flex items-center px-3 py-2 ml-auto space-x-2 leading-none text-left border rounded-full cursor-pointer border-ds-primary hover:text-ds-primary hover:bg-ds-dkgray;
+}
+
+.insert-button svg {
+	@apply h-4;
+}
+
+.ai-button {
+	@apply flex items-center justify-between w-full px-3 py-2 overflow-hidden rounded-full bg-ds-primary;
+}
+
+.ai-button-icon {
+	@apply absolute left-0 scale-0 opacity-0;
+}
+.ai-button-icon svg {
+	@apply animate-spin;
+}
+.ai-button-cost {
+	@apply block px-2 py-1 text-xs leading-none text-white border border-white rounded-full;
+}
+
+.ai-button-text {
+	@apply relative flex items-center block text-white;
+}
+
+.ai-button:hover .ai-button-icon {
+	@apply scale-100 opacity-100;
+}
+
+.ai-button:hover .ai-button-text {
+	@apply pl-6;
+}
+
+.header {
+	@apply pb-6 mb-6 space-y-4 border-b md:space-y-0 md:flex md:items-center md:justify-between border-ds-primary;
+}
+
+.header .button {
+	@apply inline-flex;
+}
+
+.ds-section {
+	@apply pt-6 border-t;
+}
+
+.action-buttons {
+	@apply grid grid-cols-2 gap-2;
+}
+
+.pill {
+	@apply px-3 py-1 text-sm border rounded-full cursor-pointer border-ds-dkgray hover:bg-ds-dkgray;
+}
+
+.card-button {
+	@apply flex items-center justify-center flex-grow px-6 py-3 space-x-2 border-r cursor-pointer last:border-r-0;
+}
+
+.card-button:hover svg {
+	@apply scale-110;
+}
+
+.action-button {
+	@apply flex items-center justify-center px-4 py-3 text-sm rounded-full bg-ds-dkgray hover:bg-opacity-50;
+}
+
+.action-button.disabled {
+	@apply bg-transparent border-2 cursor-default border-ds-dkgray;
+}
+
+.action-button.has-tag {
+	@apply px-3 py-2;
+}
+
+.status-message {
+	@apply flex w-full space-x-4;
+}
+
+.status-message p {
+	@apply w-full leading-tight;
+}
+
+.status-message > div:not(.status-dot) {
+	@apply w-full py-2;
+}
+
+.status-message .status-dot {
+	@apply w-1 h-auto rounded-none;
+}
+
+.label {
+	@apply block w-full text-sm opacity-50;
+}
+
+.status-tag {
+	@apply inline-flex items-center px-2 py-1 space-x-1 text-sm border rounded-full;
+}
+
+.status-dot {
+	@apply flex-shrink-0 w-2 h-2 rounded-full;
+}
+
+.status-tag.complete,
+.status-tag.success {
+	@apply text-ds-success border-ds-success;
+}
+
+.complete .status-dot,
+.success .status-dot {
+	@apply bg-ds-success;
+}
+
+.status-tag.processing,
+.status-tag.warning {
+	@apply text-ds-warning border-ds-warning;
+}
+
+.processing .status-dot,
+.warning .status-dot {
+	@apply bg-ds-warning;
+}
+
+.status-tag.archived {
+	@apply text-ds-neutral border-ds-neutral;
+}
+
+.archived .status-dot,
+.neutral .status-dot {
+	@apply bg-ds-neutral;
+}
+
+.status-tag.error,
+.status-tag.failure {
+	@apply text-ds-failure border-ds-failure;
+}
+
+.error .status-dot,
+.failure .status-dot {
+	@apply bg-ds-failure;
+}
+
+input:checked + div {
+	@apply border-ds-primary;
+}
+input:checked + div svg {
+	@apply block;
+}
+
+@layer base {
+	.ds-heading {
+		@apply text-3xl leading-tight tracking-tight font-filson text-ds-primary;
+	}
+
+	.ds-subheading {
+		@apply text-2xl leading-tight tracking-tight text-ds-primary;
+	}
+
+	.ds-headline-sm {
+		@apply text-xl leading-tight tracking-tight text-ds-primary;
+	}
+
+	.is-style-h1 {
+		/* 36px mobile, 4.5rem(em) 72px desktop */
+		@apply text-4xl font-bold text-book-black sm:text-7xl font-clarendon;
+		line-height: 1.125em;
+		letter-spacing: 0.01em;
+	}
+
+	/* This one is certainly not accurate. */
+	.is-style-h2 {
+		@apply font-medium text-book-black font-filson;
+		font-size: 2.125rem;
+		line-height: 1.2em;
+		letter-spacing: 0.01em;
+	}
+
+	.nav-pill {
+		@apply flex items-center px-3 py-2 mt-2 text-white cursor-pointer bg-navy;
+	}
+}
+/* Hello Sam, I'm guessing these are accurate but I would take a spin through them as well. */
+/* https://www.lingoapp.com/97507/s/dYxm5Q/?v=0 */
+h1 {
+	@apply is-style-h1;
+}
+
+h2 {
+	@apply ds-subheading;
+}
+
+.button {
+	@apply flex items-center px-4 py-3 space-x-2 text-white cursor-pointer hover:opacity-90 bg-navy disabled:opacity-75 disabled:cursor-not-allowed;
+}
+
+.button.danger {
+	@apply bg-ds-failure;
+}
+
+.button svg {
+	@apply h-5;
+}
+
+.ds-grid .ds-input {
+	@apply w-full;
+}
+
+.admin-notifications [data-section="notifications"] {
+	@apply border-0;
+}
+
+.admin-notifications .status-message {
+	@apply items-stretch p-0 p-2 space-x-2 border-0;
+}
+
+.admin-notifications p {
+	font-size: 0.75em;
+}
+
+.admin-notifications .text-xs {
+	font-size: 0.6em;
+}
+
+.admin-notifications .status-dot {
+	@apply flex flex-shrink-0 w-1 h-auto m-0 rounded-none;
+}
+
+.quill.bg-ds-gray {
+	@apply border-0 bg-ds-dkgray;
+}
+
+.quill .ql-toolbar.ql-snow {
+	@apply border-0 border-b;
+}
+
+.quill .ql-container.ql-snow {
+	min-height: 20rem;
+	@apply border-0;
+}
+
+/* Toggle B */
+.toggle:checked ~ .dot {
+	transform: translateX(100%);
+}
+
+.toggle:checked ~ .toggle-bg {
+	@apply bg-ds-primary;
+}
+
+.bbi .toggle:checked ~ .toggle-bg {
+	@apply bg-bbi-primary;
 }
 
 @tailwind utilities;
+
+.animate-blink {
+	animation: blink 3s linear infinite;
+}
+
+.animate-blink.blink-05 {
+	animation: blink 0.5s linear infinite;
+}
+.animate-blink.blink-2 {
+	animation: blink 2s linear infinite;
+}
+
+.animate-blink.blink-4 {
+	animation: blink 4s linear infinite;
+}
+.animate-blink.blink-5 {
+	animation: blink 5s linear infinite;
+}
+
+.animate-blink.blink-1 {
+	animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+	from {
+		opacity: 100%;
+	}
+	74% {
+		opacity: 100%;
+	}
+	75% {
+		opacity: 10%;
+	}
+	89% {
+		opacity: 20%;
+	}
+	90% {
+		opacity: 100%;
+	}
+	to {
+		opacity: 100%;
+	}
+}

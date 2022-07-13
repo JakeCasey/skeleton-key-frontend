@@ -1,8 +1,14 @@
-import Dashboard from '../components/special/Dashboard';
+import PleaseSignIn from '../components/PleaseSignIn';
+import PleaseSubscribe from '../components/PleaseSubscribe';
+import HomePage from '../components/special/HomePage';
 
 const Home = (props) => (
   <div>
-    <Dashboard />
+    <PleaseSignIn>
+      <PleaseSubscribe>
+        <HomePage />
+      </PleaseSubscribe>
+    </PleaseSignIn>
   </div>
 );
 

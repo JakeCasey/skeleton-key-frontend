@@ -1,63 +1,59 @@
-import React, { Component } from 'react';
-import { Mutation } from 'react-apollo';
-import gql from 'graphql-tag';
-import Error from '../components/ErrorMessage';
-import { CURRENT_USER_QUERY } from './wrappers/User';
+import gql from "graphql-tag";
+import {useState} from "react";
+import {useMutation} from "react-apollo";
+import Error from "../components/ErrorMessage";
+import SuccessMessage from "./SuccessMessage";
 
 const REQUEST_RESET_MUTATION = gql`
-  mutation REQUEST_RESET_MUTATION($email: String!) {
-    requestReset(email: $email) {
-      message
-    }
-  }
+	mutation REQUEST_RESET_MUTATION($email: String!) {
+		requestReset(email: $email) {
+			message
+		}
+	}
 `;
 
-export default class RequestReset extends Component {
-  state = {
-    email: '',
-  };
+let RequestReset = () => {
+	let [email, updateEmail] = useState("");
+	let [requestReset, {data, error, loading}] = useMutation(REQUEST_RESET_MUTATION, {
+		onCompleted: () => {
+			updateShowSuccess(true);
+		},
+	});
+	let [showSuccess, updateShowSuccess] = useState(false);
 
-  saveToState = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
-  t;
-  render() {
-    return (
-      <Mutation mutation={REQUEST_RESET_MUTATION} variables={this.state}>
-        {(reset, { error, loading, called }) => {
-          return (
-            <form
-              data-test="form"
-              method="post"
-              onSubmit={async (e) => {
-                e.preventDefault();
-                await reset();
-                this.setState({ email: '' });
-              }}
-            >
-              <fieldset disabled={loading} aria-busy={loading}>
-                <h2>Request a password reset</h2>
-                <Error error={error} />
-                {!error && !loading && called && (
-                  <p> Success! Check your email for a reset link! </p>
-                )}
-                <label htmlFor="email">
-                  Email
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="email"
-                    value={this.state.email}
-                    onChange={this.saveToState}
-                  />
-                </label>
-                <button type="submit">Request Reset!</button>
-              </fieldset>
-            </form>
-          );
-        }}
-      </Mutation>
-    );
-  }
-}
-export { REQUEST_RESET_MUTATION };
+	let handleResetRequest = () => {
+		requestReset({variables: {email}});
+	};
+
+	return (
+		<div className="flex items-center justify-center h-screen">
+			<div className="w-full max-w-md space-y-4">
+				<h2 className="ds-subheading">Reset Password</h2>
+				<Error error={error} />
+				{showSuccess && (
+					<SuccessMessage
+						message={"Success! We’ve sent you an email with a link to reset your password."}
+					/>
+				)}
+				<div className="">
+					<label htmlFor="email" className="label">
+						Email
+					</label>
+					<input
+						type="email"
+						name="email"
+						placeholder="Your Email"
+						value={email}
+						className="w-full ds-input"
+						onChange={(e) => updateEmail(e.target.value)}
+					/>
+				</div>
+				<button onClick={() => handleResetRequest()} className="button">
+					Request Password Reset
+				</button>
+			</div>
+		</div>
+	);
+};
+
+export default RequestReset;

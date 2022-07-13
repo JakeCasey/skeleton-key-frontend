@@ -7,18 +7,20 @@ const CURRENT_USER_QUERY = gql`
   query {
     me {
       id
+      customerId
+      isSubscribed
+      period_ends
       email
       name
       permissions
-      plansSubscribed
     }
   }
 `;
 
-const User = props => {
+const User = (props) => {
   return (
     <Query {...props} query={CURRENT_USER_QUERY}>
-      {payload => props.children(payload)}
+      {(payload) => props.children(payload)}
     </Query>
   );
 };

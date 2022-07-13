@@ -2,13 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-const ErrorStyles = () => {
-  <div className="p-4 text-red-700 bg-red-100 border-l-4 border-red-500">
-    {this.props.children}
-  </div>;
-};
-
-const DisplayError = ({ error }) => {
+const ErrorMessage = ({ error }) => {
   if (!error || !error.message) return null;
   if (
     error.networkError &&
@@ -16,30 +10,22 @@ const DisplayError = ({ error }) => {
     error.networkError.result.errors.length
   ) {
     return error.networkError.result.errors.map((error, i) => (
-      <ErrorStyles key={i}>
-        <p data-test="graphql-error">
-          <strong>Shoot! </strong>{' '}
-          {error.message.replace('GraphQL error: ', '')}
-        </p>
-      </ErrorStyles>
+      <div key={i} className="mb-2 bg-white status-message error">
+        <div className="status-dot line"></div>
+        <div>
+          <p>{error.message.replace('GraphQL error: ', '')}</p>
+        </div>
+      </div>
     ));
   }
   return (
-    <ErrorStyles>
-      <p data-test="graphql-error">
-        <strong>Shoot!</strong>
-        {error.message.replace('GraphQL error: ', '')}
-      </p>
-    </ErrorStyles>
+    <div className="mb-2 bg-white status-message error">
+      <div className="status-dot line"></div>
+      <div>
+        <p>{error.message.replace('GraphQL error: ', '')}</p>
+      </div>
+    </div>
   );
 };
 
-DisplayError.defaultProps = {
-  error: {},
-};
-
-DisplayError.propTypes = {
-  error: PropTypes.object,
-};
-
-export default DisplayError;
+export default ErrorMessage;

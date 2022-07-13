@@ -1,27 +1,23 @@
-import React, { Component } from 'react';
-import Link from 'next';
-import Meta from './Meta';
-import SideNav from './SideNav';
-import Header from './Header';
+import React, {Component} from "react";
+import Header from "./Header";
+import Meta from "./Meta";
+import NotificationBar from "./NotificationBar";
+import {useState} from "react";
 
 class Page extends Component {
-  render() {
-    return (
-      <div className="">
-        <Meta />
-        {/* <TopBar /> */}
-        <div className="flex h-screen">
-          <Header />
-          <SideNav />
-          <main className="relative z-0 flex-1 pt-2 pb-6 overflow-y-auto bg-gray-100 focus:outline-none md:py-6">
-            <div className="px-4 mx-auto max-w-7xl sm:px-6 md:px-8">
-              <div className="py-4">{this.props.children}</div>
-            </div>
-          </main>
-        </div>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div data-section="page" className="min-h-screen bg-nimbus-gray">
+				<Meta />
+				<div className="min-h-screen border-l-8 md:flex border-ds-navy">
+					<Header allDocs={this.props?.allDocs} />
+					<div data-section="content" className="w-full h-screen overflow-scroll">
+						<div>{this.props.children}</div>
+					</div>
+				</div>
+			</div>
+		);
+	}
 }
 
 export default Page;

@@ -2,7 +2,6 @@ import React from 'react';
 import { Mutation } from 'react-apollo';
 import StripeCheckout from 'react-stripe-checkout';
 import { CURRENT_USER_QUERY } from './wrappers/User';
-import { STRIPE_PUBLIC_KEY } from '../config';
 import gql from 'graphql-tag';
 import SickButton from './styles/SickButton';
 
@@ -11,7 +10,6 @@ const UNSUBSCRIBE_USER_MUTATION = gql`
     unsubscribe(planId: $planId) {
       id
       subscriptionId
-      plansSubscribed
     }
   }
 `;

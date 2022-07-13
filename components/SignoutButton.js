@@ -1,28 +1,42 @@
-import React, { Component } from 'react';
-import { Mutation } from 'react-apollo';
-import Error from './ErrorMessage';
-import gql from 'graphql-tag';
-import { CURRENT_USER_QUERY } from './wrappers/User';
+import React, {Component} from "react";
+import Router from "next/router";
+import {Mutation} from "react-apollo";
+
+import gql from "graphql-tag";
+import {CURRENT_USER_QUERY} from "./wrappers/User";
+import IconSignout from "./icons/IconSignout";
 
 const SIGN_OUT_MUTATION = gql`
-  mutation SIGN_OUT_MUTATION {
-    signout {
-      message
-    }
-  }
+	mutation SIGN_OUT_MUTATION {
+		signout {
+			message
+		}
+	}
 `;
 
 export default class SignoutButton extends Component {
-  render() {
-    return (
-      <Mutation
-        mutation={SIGN_OUT_MUTATION}
-        refetchQueries={[{ query: CURRENT_USER_QUERY }]}
-      >
-        {(signout, { loading, error }) => {
-          return <span onClick={() => signout()}>Sign Out </span>;
-        }}
-      </Mutation>
-    );
-  }
+	render() {
+		return (
+			<Mutation mutation={SIGN_OUT_MUTATION} refetchQueries={[{query: CURRENT_USER_QUERY}]}>
+				{(signout, {loading, error}) => {
+					return (
+						<>
+							<button
+								onClick={() => {
+									signout();
+									Router.push("/");
+								}}
+								className="nav-link group"
+							>
+								<span className="nav-icon">
+									<IconSignout />
+								</span>
+								<span>Sign Out</span>
+							</button>
+						</>
+					);
+				}}
+			</Mutation>
+		);
+	}
 }

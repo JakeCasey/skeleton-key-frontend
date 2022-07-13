@@ -1,13 +1,14 @@
 import React from 'react';
-import Signup from '../components/Signup';
 import Signin from '../components/Signin';
-import RequestReset from '../components/RequestReset';
+import { NextSeo } from 'next-seo';
 
 const SignupPage = (props) => (
-  <div className="flex flex-col items-center">
-    <RequestReset />
+  <div>
+    <NextSeo
+      title="Dirigible Website Builder Login | Welcome Back, We Missed You"
+      description="Login to your Dirigible account. Dirigible is the website builder that grows and changes as your brand evolves."
+    />
     <Signin />
-    <Signup />
   </div>
 );
 

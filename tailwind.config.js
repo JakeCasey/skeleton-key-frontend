@@ -1,10 +1,61 @@
-// custom tailwind color scale generator
-// https://javisperez.github.io/tailwindcolorshades/
-
+const defaultTheme = require('tailwindcss/defaultTheme');
+// To completely remove non-brand colors, move the colors object outside of the extend object and delete the extend object.
 module.exports = {
+  mode: 'jit',
+  content: ['./pages/**/*.js', './components/**/*.js'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        navy: '#191345',
+        'flare-orange': '#fbae48',
+        'book-black': '#34313a',
+        white: '#fcfcfc',
+        'nimbus-gray': '#f3f3f7',
+        'fog-gray': '#f2f2f2',
+        'stratus-gray': '#d9d8db',
+        'cirrus-gray': '#9f9ea6',
+        'flag-red': '#7f221d',
+        'sunset-red': '#aa2c26',
+        'rose-pink': '#bb5651',
+        'powder-pink': '#ebd3cc',
+        'beacon-orange': '#c0552a',
+        'strike-yellow': '#ffd024',
+        'ever-green': '#244e4c',
+        'ocean-green': '#449996',
+        'superior-green': '#62c6c5',
+        'paris-green': '#c1e6e4',
+        'pilot-blue': '#284181',
+        'flag-blue': '#52679a',
+        'blue-sky': '#d3d4e3',
+        'ds-dkgray': '#DADAE3',
+        'ds-primary': '#191345',
+        'ds-navy': '#191345',
+        'ds-blue': '#284181',
+        'ds-orange': '#c0552a',
+        'ds-yellow': '#fbae48',
+        'ds-gray': '#f3f3f7',
+        'ds-black': '#34313a',
+        'ds-success': '#16a34a',
+        'ds-failure': '#dc2626',
+        'ds-warning': '#f59e0b',
+        'ds-neutral': '#94a3b8',
+        'bbi-primary': '#42286d',
+        'bbi-secondary': '#fdb714',
+      },
+      fontFamily: {
+        clarendon: ['clarendon-text-pro', 'Georgia', 'serif'],
+        filson: ['filson-pro', 'Helvetica', 'Arial', 'sans-serif'],
+      },
+    },
   },
-  variants: ['responsive', 'hover'],
-  plugins: [require('@tailwindcss/ui')],
+  purge: [
+    './public/static/tailwind.css',
+    './pages/*.js',
+    './pages/**/*.js',
+    './components/**',
+    './components/*.js',
+    './components/**/*.js',
+    './components/**/**/*.js',
+    './lib/*.js',
+  ],
 };
