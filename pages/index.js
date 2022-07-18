@@ -5,9 +5,7 @@ import HomePage from '../components/special/HomePage';
 const Home = (props) => (
   <div>
     <PleaseSignIn>
-      <PleaseSubscribe>
-        <HomePage />
-      </PleaseSubscribe>
+      <HomePage />
     </PleaseSignIn>
   </div>
 );

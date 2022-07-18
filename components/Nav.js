@@ -34,10 +34,10 @@ let LoggedInNavOptions = ({ me }) => {
             <span className="nav-icon">
               <IconSites />
             </span>
-            <span>Sites </span>
+            <span>Home </span>
           </a>
         </Link>
-
+        {/* 
         {me.permissions.indexOf('ADMIN') > -1 ? (
           <Link href="/admin">
             <a
@@ -51,9 +51,9 @@ let LoggedInNavOptions = ({ me }) => {
               <span>Admin</span>
             </a>
           </Link>
-        ) : null}
+        ) : null} */}
 
-        <Link href="/settings">
+        {/* <Link href="/settings">
           <a
             className={`border-b nav-link group ${
               path === '/settings' ? 'active' : ''
@@ -64,16 +64,16 @@ let LoggedInNavOptions = ({ me }) => {
             </span>
             <span>Account</span>
           </a>
-        </Link>
+        </Link> */}
 
-        <Link href="https://support.mydirigible.com" passHref>
+        {/* <Link href="https://support.mydirigible.com" passHref>
           <a className="border-b nav-link group" target="_blank">
             <span className="nav-icon">
               <IconHelp />
             </span>
             <span>Docs</span>
           </a>
-        </Link>
+        </Link> */}
       </div>
       <div data-section="site-nav-bottom">
         <div className="md:border-t">
