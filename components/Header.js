@@ -1,13 +1,14 @@
 import Link from 'next/link';
 import Nav from './Nav';
 import { useEffect } from 'react';
-import { useQuery } from 'react-apollo';
+import { useQuery } from '@apollo/client';
 import Router, { useRouter } from 'next/router';
 import { CURRENT_USER_QUERY } from './wrappers/User';
 import NProgress from 'nprogress';
 import Logo from '../components/svg/Logo';
 import Hamburger from './ui/Hamburger';
 import { useState } from 'react';
+import client from '../lib/withData.js';
 
 Router.onRouteChangeStart = () => {
   NProgress.start();
@@ -25,7 +26,11 @@ let isProduction = process.env.NODE_ENV === 'production';
 const Header = (props) => {
   const [navOpen, setNavOpen] = useState(false);
 
-  let { error, loading, data: { me } = {} } = useQuery(CURRENT_USER_QUERY);
+  let {
+    error,
+    loading,
+    data: { me } = {},
+  } = useQuery(CURRENT_USER_QUERY, { client });
   let router = useRouter();
 
   useEffect(() => {

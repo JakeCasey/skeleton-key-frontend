@@ -1,4 +1,4 @@
-import { Query } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
 import { CURRENT_USER_QUERY } from './wrappers/User';
 import { isSubscribed } from '../lib/helpers';
 import Payment from './Payment';

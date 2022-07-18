@@ -2,12 +2,13 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { CURRENT_USER_QUERY } from './wrappers/User';
 import SignoutButton from './SignoutButton';
-import { useQuery } from 'react-apollo';
+import { useQuery } from '@apollo/client';
 import IconSites from './icons/IconSites';
 import IconSettings from './icons/IconSettings';
 import IconUser from './icons/IconUser';
 import IconHelp from './icons/IconHelp';
 import IconRightAngle from './icons/IconRightAngle';
+import client from '../lib/withData.js';
 
 const SettingsButton = () => (
   <Link href="/settings">
@@ -101,7 +102,11 @@ let LoggedOutNavOptions = () => {
 };
 
 const Nav = (props) => {
-  let { error, loading, data: { me } = {} } = useQuery(CURRENT_USER_QUERY);
+  let {
+    error,
+    loading,
+    data: { me } = {},
+  } = useQuery(CURRENT_USER_QUERY, { client });
 
   if (loading) {
     return <p>.</p>;
