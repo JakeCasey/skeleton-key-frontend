@@ -1,7 +1,5 @@
 import React from 'react';
 
-import PropTypes from 'prop-types';
-
 const ErrorMessage = ({ error }) => {
   if (!error || !error.message) return null;
   if (
