@@ -1,5 +1,5 @@
 import React, { Component, useState, useEffect } from 'react';
-import { useMutation } from 'react-apollo';
+import { useMutation } from '@apollo/client';
 import gql from 'graphql-tag';
 
 import Error from '../components/ErrorMessage';

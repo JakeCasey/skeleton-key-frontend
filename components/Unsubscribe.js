@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mutation } from 'react-apollo';
+import { Mutation } from '@apollo/client';
 import StripeCheckout from 'react-stripe-checkout';
 import { CURRENT_USER_QUERY } from './wrappers/User';
 import gql from 'graphql-tag';

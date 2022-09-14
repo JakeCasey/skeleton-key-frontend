@@ -10,7 +10,6 @@ const CURRENT_USER_QUERY = gql`
       period_ends
       email
       name
-      permissions
     }
   }
 `;
