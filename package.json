@@ -24,7 +24,7 @@
     "graphql": "^14.4.2",
     "graphql-tag": "^2.10.1",
     "mjml-browser": "^4.13.0",
-    "next": "^12.2.2",
+    "next": "^13.5.0",
     "next-seo": "^5.4.0",
     "nprogress": "^0.2.0",
     "react": "^18.2.0",
